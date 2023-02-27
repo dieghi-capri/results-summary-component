@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsla(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --gray: hsl(224, 30%, 27%, 0.5);
+  --light-red-bg: hsla(0, 100%, 67%, 0.2);
+  --orangey-yellow-bg: hsla(39, 100%, 56%, 0.2);
+  --green-teal-bg: hsla(166, 100%, 37%, 0.2);
+  --light-lavender-bg: hsla(241, 100%, 89%, 0.2);
+
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 650px;
+  -webkit-box-shadow: 18px 16px 19px 0px rgba(200, 199, 255, 0.51);
+  box-shadow: 18px 16px 19px 0px rgba(200, 199, 255, 0.51);
+  border-radius: 0 2rem 2rem 0;
+}
+
+.container-result {
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  width: 50%;
+  height: 440px;
+}
+
+.container-result h3 {
+  color: var(--light-lavender);
+  padding-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+.container-result h2 {
+  color: var(--white);
+  padding: 1.5rem 0 0.5rem 0;
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+
+.result {
+  border-radius: 100%;
+  height: 160px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+}
+
+.result h1 {
+  font-size: 60px;
+  color: var(--white);
+  font-weight: 800;
+}
+
+.result p {
+  color: var(--light-lavender);
+}
+.container-result .bottom {
+  color: var(--light-lavender);
+  text-align: center;
+  padding: 1rem 1.5rem 0rem 1.5rem;
+}
+
+.container-summary {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 440px;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  gap: 2.5rem;
+}
+
+.container-result h3 {
+  padding-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.container-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.container-summary .container-items .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.container-summary .container-items .item .title {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 800;
+}
+
+.container-items .item:nth-child(1) {
+  background-color: var(--light-red-bg);
+  color: var(--light-red);
+}
+.container-items .item:nth-child(2) {
+  background-color: var(--orangey-yellow-bg);
+  color: var(--orangey-yellow);
+}
+.container-items .item:nth-child(3) {
+  background-color: var(--green-teal-bg);
+  color: var(--green-teal);
+}
+.container-items .item:nth-child(4) {
+  background-color: var(--light-lavender-bg);
+  color: var(--cobalt-blue);
+}
+
+.fraction {
+  color: var(--gray);
+  font-weight: 800;
+}
+
+.bold {
+  color: var(--dark-gray-blue);
+}
+
+.btn {
+  border-style: none;
+  background-color: var(--dark-gray-blue);
+  border-radius: 2rem;
+  height: 3rem;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding-bottom: 0;
+}
+
+.btn:hover{
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+
+@media (max-width: 660px){
+  main{
+    align-items: flex-start;
+  }
+  .cards{
+    flex-direction: column;
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .container-result {
+    border-radius: 0 0 2rem 2rem;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .container-summary {
+    width: 100%;
+    height: 100%;
+    gap:1.5rem;
+  }
+  .btn{
+    height: 4rem;
+  }
+}
