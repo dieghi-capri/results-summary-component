@@ -36,6 +36,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -174,10 +175,14 @@ main {
   background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
 }
 
+.attribution {
+  padding-top: 2rem;
+}
 
 @media (max-width: 660px){
   main{
-    align-items: flex-start;
+    height: auto;
+    
   }
   .cards{
     flex-direction: column;
@@ -199,5 +204,9 @@ main {
   }
   .btn{
     height: 4rem;
+  }
+
+  .attribution {
+    padding-top: 0;
   }
 }
